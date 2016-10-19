@@ -21,7 +21,24 @@ LRANGE list 0 -1
 LINSERT list AFTER "first" "first-and-a-half"
 LRANGE list 0 -1
 
+##########################################
+  RPOPLPUSH
+##########################################
+
 # Atomically pop from the tail and push to the head of a queue
 RPOPLPUSH list other-list
 LRANGE list 0 -1
 LRANGE other-list 0 -1
+
+##########################################
+  Circular list
+##########################################
+
+RPUSH round-robin "first" "second" "third"
+LRANGE round-robin 0 -1
+ 
+RPOPLPUSH round-robin round-robin
+LRANGE round-robin 0 -1
+
+LINSERT round-robin BEFORE "first" "forth" 
+LRANGE round-robin 0 -1
