@@ -1,2 +1,0 @@
-HMSET lang:pt-PT locale "pt-PT" dateFormat "YYYY-MM-dd HH:mm:ss" currencyFormat "#.## EUR"
-HMSET lang:en-US locale "en-US" dateFormat "MM-YYYY-dd hh:mm:ss tt" currencyFormat "#.## USD"
