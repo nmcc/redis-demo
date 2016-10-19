@@ -1,0 +1,20 @@
+# Some basic Hash foo
+HMSET lang:pt-PT locale "pt-PT" dateFormat "YYYY-MM-dd HH:mm:ss" currencyFormat "#.## EUR"
+HMSET lang:en-US locale "en-US" dateFormat "MM-YYYY-dd hh:mm:ss tt" currencyFormat "#.## USD"
+
+HGET lang:pt-PT dateFormat
+
+HGETALL lang:pt-PT
+
+####################################
+  Increment values inside hashes
+####################################
+
+HMSET comment:1001 text "I just love Redis" votes 0 
+HGETALL comment:1001
+
+HINCRBY comment:1001 votes 1
+HINCRBY comment:1001 votes 5
+HINCRBY comment:1001 votes -2
+
+HGETALL comment:1001

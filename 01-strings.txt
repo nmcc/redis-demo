@@ -1,0 +1,17 @@
+# PREPARE
+FLUSHALL
+
+# Set and get
+EXISTS exchangeRate:USD:EUR 
+SET exchangeRate:USD:EUR 0.9107 
+GET exchangeRate:USD:EUR 
+EXISTS exchangeRate:USD:EUR
+
+MSET exchangeRate:USD:EUR 0.9107 exchangeRate:EUR:USD 1,0981
+MGET exchangeRate:USD:EUR exchangeRate:EUR:USD
+
+# Increment and decrement
+INCR visitsCount
+GET visitsCount
+INCRBY visitsCount 5
+INCRBY visitsCount -2

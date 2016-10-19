@@ -1,0 +1,27 @@
+# PREPARE
+FLUSHALL
+
+# Push stuff
+LPUSH list "second" "first"
+RPUSH list "last"
+LRANGE list 0 -1
+
+LPUSH list "priority"
+LRANGE list 0 -1
+
+# Pop from the head
+LPOP list
+LRANGE list 0 -1
+
+# Replace an element on a position
+LSET list 1 "second-replacement"
+LRANGE list 0 -1
+
+# Insert elements in the middle of the list
+LINSERT list AFTER "first" "first-and-a-half"
+LRANGE list 0 -1
+
+# Atomically pop from the tail and push to the head of a queue
+RPOPLPUSH list other-list
+LRANGE list 0 -1
+LRANGE other-list 0 -1
