@@ -8,7 +8,7 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             // Run MONITOR command on redis-cli to display the commands that are being executed
-            using (var redis = ConnectionMultiplexer.Connect("localhost"))
+            using (var redis = ConnectionMultiplexer.Connect("127.0.0.1"))
             {
                 var redisDb = redis.GetDatabase();
 
