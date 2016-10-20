@@ -1,6 +1,7 @@
 {
     "projects": [
         "pipeline",
-        "transactions"      
+        "transactions",
+        "scripts" 
     ]    
 }
