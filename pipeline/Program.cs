@@ -18,7 +18,8 @@ namespace ConsoleApplication
                 var counter2Value = batch.StringIncrementAsync("counter:2", 10);
                 batch.Execute();
 
-                Console.WriteLine("counter1 = {0}, counter2 = {1}", counter1Value.Result, counter2Value.Result);
+                Console.WriteLine("counter1 = {0}", counter1Value.Result);
+                Console.WriteLine("counter2 = {0}", counter2Value.Result);
             }
         }
     }
