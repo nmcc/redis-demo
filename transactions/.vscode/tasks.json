@@ -8,13 +8,16 @@
     "tasks": [
         {
             "taskName": "build",
-            "args": [ 
-                "${workspaceRoot}\\pipeline\\project.json",
-                "${workspaceRoot}\\transactions\\project.json"
-            ],
+            "args": [],
             "isBuildCommand": true,
             "showOutput": "silent",
             "problemMatcher": "$msCompile"
+        },
+        {
+            "taskName": "run",
+            "args": [],
+            "isBuildCommand": false,
+            "showOutput": "always"
         }
     ]
 }
