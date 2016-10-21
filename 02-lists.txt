@@ -17,8 +17,12 @@ LRANGE list 0 -1
 LSET list 1 "second-replacement"
 LRANGE list 0 -1
 
-# Insert elements in the middle of the list
+# Insert elements in the middle of the list  - This is NOT O(1)
 LINSERT list AFTER "first" "first-and-a-half"
+LRANGE list 0 -1
+
+# Trim the list so that it gets only the first three elements
+LTRIM list 0 2
 LRANGE list 0 -1
 
 ##########################################
