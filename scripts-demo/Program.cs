@@ -19,7 +19,7 @@ namespace ConsoleApplication
 
                 // Converts the script to a single line in order to be loaded to Redis
                 // Also does some StackExchange.Redis specific arguments replacement
-                LuaScript prepared = LuaScript.Prepare(File.ReadAllText("calculate_stats.lua.txt"));
+                LuaScript prepared = LuaScript.Prepare(File.ReadAllText("calculate_stats.lua"));
 
                 // Loads the script into the server and returns the SHA
                 LoadedLuaScript loaded = prepared.Load(server);
