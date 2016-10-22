@@ -15,3 +15,10 @@ INCR visitsCount
 GET visitsCount
 INCRBY visitsCount 5
 INCRBY visitsCount -2
+
+TYPE visitsCount
+
+# If not exists variants
+SETNX availableSeats 10
+GET availableSeats
+INCRBY availableSeats -1
