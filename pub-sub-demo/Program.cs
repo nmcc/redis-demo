@@ -86,8 +86,6 @@ namespace ConsoleApplication
 
     public class Consumer : RedisSubscriber
     {
-        private int counter = 0;
-
         public Consumer(String name) : base(name)
         {
             this.Subscriber.Subscribe(Program.TOPIC_NAME, (channel, message) =>
