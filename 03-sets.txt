@@ -26,23 +26,3 @@ SUNION prog-lang:alice prog-lang:bob
 SUNIONSTORE prog-lang:team:1 prog-lang:alice prog-lang:bob
 SMEMBERS prog-lang:team:1
 
-#####################################################
-DECK
-#####################################################
-
-# Add a deck of cards
-SADD deck C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 CJ CQ CK D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 DJ DQ DK H1 H2 H3 H4 H5 H6 H7 H8 H9 H10 HJ HQ HK S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 SJ SQ SK
-
-# Pick a random card, without taking it out the deck
-SRANDMEMBER deck
-
-# Create a game with the default deck
-SUNIONSTORE game:1:deck deck
-
-# Pick a card from the game deck and give it to player 1
-SPOP game:1:deck
-SADD game:1:player:1 <CARD>
-SUNION game:1:deck game:1:player:1
-
-# Now, the game deck has only 51 cards
-SCARD game:1:deck
