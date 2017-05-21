@@ -14,7 +14,6 @@ SMEMBERS prog-lang:alice
 
 # Let's add Bob
 SADD prog-lang:bob C Python Ruby
-(integer) 3
 
 # Which languages both Bob and Alice know about? 
 SINTER prog-lang:alice prog-lang:bob

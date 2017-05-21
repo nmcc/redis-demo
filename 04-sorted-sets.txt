@@ -1,5 +1,9 @@
 ZADD prog-lang-rank:alice 40 C 60 Java 80 C# 30 Ruby
 
+# See Alice's languages
+ZREVRANGE prog-lang-rank:alice 0 -1 
+ZREVRANGE prog-lang-rank:alice 0 -1 WITHSCORES
+
 # What is Alice's rank of C#?
 ZREVRANK prog-lang-rank:alice C#
 
@@ -11,6 +15,7 @@ ZREVRANGE prog-lang-rank:alice 0 1
 
 # What are the programming languages for which Alice scores at least 40?
 ZREVRANGEBYSCORE prog-lang-rank:alice 100 40
+ZREVRANGEBYSCORE prog-lang-rank:alice +inf 40
 
 #########################################
  INTRODUCING BOB
@@ -21,3 +26,4 @@ ZADD prog-lang-rank:bob 30 C 50 Python 50 Ruby
 # If we created a team with Alice and Bob, what would be the MAX score for each language?
 ZUNIONSTORE prog-lang-rank:team:1 2 prog-lang-rank:alice prog-lang-rank:bob AGGREGATE MAX
 ZREVRANGE prog-lang-rank:team:1 0 -1 WITHSCORES
+
