@@ -1,4 +1,4 @@
-This repo contains some demo code for Redis using .NET Core 1.1
+This repo contains some demo code for Redis using .NET Core 2.2
 
 # Set-up the stage
 
@@ -7,7 +7,7 @@ This repo contains some demo code for Redis using .NET Core 1.1
 1. Open redis CLI on the container shell: `redis-cli`
 
 # Running the demo programs
-To run the demo programs, it is required to have .NET Core 1.1 installed on your computer.
+To run the demo programs, it is required to have .NET Core 2.2 installed on your computer.
 
 1. `cd <demo-project>`
 1. `dotnet restore`

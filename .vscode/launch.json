@@ -1,52 +1,52 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (console)",
+            "name": "Pipeline Demo",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/bin/Debug/<target-framework>/<project-name.dll>",
+            "program": "${workspaceFolder}/pipeline-demo/bin/Debug/netcoreapp2.2/pipeline-demo.dll",
             "args": [],
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceFolder}/pipeline-demo",
             "stopAtEntry": false,
             "console": "internalConsole"
         },
         {
-            "name": ".NET Core Launch (web)",
+            "name": "Pubsub Demo",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/bin/Debug/<target-framework>/<project-name.dll>",
+            "program": "${workspaceFolder}/pub-sub-demo/bin/Debug/netcoreapp2.2/pub-sub-demo.dll",
             "args": [],
-            "cwd": "${workspaceRoot}",
-            "stopAtEntry": false,
-            "launchBrowser": {
-                "enabled": true,
-                "args": "${auto-detect-url}",
-                "windows": {
-                    "command": "cmd.exe",
-                    "args": "/C start ${auto-detect-url}"
-                },
-                "osx": {
-                    "command": "open"
-                },
-                "linux": {
-                    "command": "xdg-open"
-                }
-            },
-            "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
-            },
-            "sourceFileMap": {
-                "/Views": "${workspaceRoot}/Views"
-            }
+            "cwd": "${workspaceFolder}/pub-sub-demo",
+            "console": "internalConsole",
+            "stopAtEntry": false
         },
         {
-            "name": ".NET Core Attach",
+            "name": "Scripts Demo",
             "type": "coreclr",
-            "request": "attach",
-            "processId": "${command:pickProcess}"
-        }
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/scripts-demo/bin/Debug/netcoreapp2.2/scripts-demo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/scripts-demo",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Transactions Demo",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/transactions-demo/bin/Debug/netcoreapp2.2/transactions-demo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/transactions-demo",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
     ]
 }
