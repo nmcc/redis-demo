@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Hash Demo",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/hash-demo/bin/Debug/netcoreapp2.2/hash-demo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/hash-demo",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
             "name": "Pipeline Demo",
             "type": "coreclr",
             "request": "launch",

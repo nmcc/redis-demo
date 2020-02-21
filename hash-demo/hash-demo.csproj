@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>hash_demo</RootNamespace>
+  </PropertyGroup>
+
+   <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="2.1.0-preview.23" />
+  </ItemGroup>
+
+</Project>
